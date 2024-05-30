@@ -5,12 +5,12 @@ from django.contrib.auth.models import User
 class Categoria(models.TextChoices):
     ELETRONICOS = "Eletronicos"
     COMIDA = "Comidas"
-    CASA = "CASA"
-    COZINHA = "COZINHA"
-    ROUPAS = "ROUPAS"
-    ESPORTE = "ESPORTE"
-    BRINQUEDOS = "BRINQUEDOS"
-    LIVROS = "LIVROS"
+    CASA = "Casa"
+    COZINHA = "Cozinha"
+    ROUPAS = "Roupas"
+    ESPORTE = "Esporte"
+    BRINQUEDOS = "Brinquedos"
+    LIVROS = "Livros"
 
 class Produto(models.Model):
     nome = models.CharField(max_length=255, default='', blank=False)
