@@ -22,3 +22,7 @@ class Produto(models.Model):
     estoque = models.IntegerField(default=0)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     criadoEm = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.nome
+    
