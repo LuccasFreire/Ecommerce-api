@@ -26,8 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == 'True'
-
-ALLOWED_HOSTS = []
+#DEBUG = False
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -89,6 +89,9 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'product.utils.custom_exception_handler.custom_exception_handler'
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

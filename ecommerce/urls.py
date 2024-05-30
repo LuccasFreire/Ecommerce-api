@@ -20,5 +20,6 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('product.urls')),
-
 ]
+handler404 = 'product.utils.error_views.handler404'
+handler500 = 'product.utils.error_views.handler500'
